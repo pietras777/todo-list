@@ -1,0 +1,12 @@
+.todo {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50%;
+  margin: 10px auto;
+  border: 1px solid white;
+  display: flex;
+}
+
+.done-btn {
+  width: 20%;
+  margin-left: auto;
+}
