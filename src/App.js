@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import Todo from "./components/Todo";
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -19,13 +18,25 @@ const App = () => {
     } else return;
   };
 
+  const handleDoneTodo = (myTodo) => {
+    const TODO_ID = myTodo.target.parentElement.id;
+    todos.forEach((el) => {
+      if (el === TODO_ID) {
+        todos.splice(TODO_ID, 1);
+      }
+    });
+  };
+
   return (
     <>
       <h1>Todo list</h1>
       <input type="text" onChange={(ev) => handleTodoValue(ev)} />
       <button onClick={handleAddTodo}>Add todo</button>
       {todos.map((el) => (
-        <Todo key={el} todo={el} />
+        <div key={el} id={el}>
+          <h3>{el}</h3>
+          <button onClick={handleDoneTodo}>Done</button>
+        </div>
       ))}
     </>
   );
