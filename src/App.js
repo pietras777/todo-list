@@ -22,8 +22,14 @@ const App = () => {
     const TODO_ID = myTodo.target.parentElement.id;
     todos.forEach((el) => {
       if (el === TODO_ID) {
-        todos.splice(TODO_ID, 1);
+        console.log("el ===", TODO_ID);
+        const TODO_INDEX = todos.indexOf(TODO_ID);
+        todos.splice(TODO_INDEX, 1);
       }
+      // if (el === TODO_ID) {
+      //   todos.splice(TODO_INDEX);
+      //   console.log("todos ===", todos);
+      // }
     });
   };
 
