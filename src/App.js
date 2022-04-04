@@ -26,6 +26,7 @@ const App = () => {
         const TODO_INDEX = todos.indexOf(TODO_ID);
         todos.splice(TODO_INDEX, 1);
       }
+      // OLD
       // if (el === TODO_ID) {
       //   todos.splice(TODO_INDEX);
       //   console.log("todos ===", todos);
